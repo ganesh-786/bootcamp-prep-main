@@ -4,6 +4,6 @@ let word = 'carrots';
 // let word = 'perfect';
 
 
-let lastWord;
 
 // YOUR CODE BELOW
+let lastWord='carrots'
