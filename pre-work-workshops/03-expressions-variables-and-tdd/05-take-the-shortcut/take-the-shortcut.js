@@ -1,3 +1,5 @@
-let happyNum = 1000;
+
 
 // YOUR CODE BELOW
+
+let happyNum=5;
