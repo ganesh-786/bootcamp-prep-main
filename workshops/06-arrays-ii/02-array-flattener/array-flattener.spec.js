@@ -1,17 +1,16 @@
-describe('arrayFlattener', () => {
-
-  it('is a function', () => {
-    expect(typeof arrayFlattener).toEqual('function');
+describe("arrayFlattener", () => {
+  it("is a function", () => {
+    expect(typeof arrayFlattener).toEqual("function");
   });
 
-  it('returns an array', () => {
+  it("returns an array", () => {
     let returnedValue = arrayFlattener([1, 2, [3]]);
     expect(Array.isArray(returnedValue)).toEqual(true);
   });
 
-  it('returns a one-dimensional array', () => {
+  it("returns a one-dimensional array", () => {
     // get the return value from the function
-    let returnedValue = arrayFlattener('this is crazy');
+    let returnedValue = arrayFlattener("this is crazy");
 
     // make sure none of the elements in the array are an array
     let foundInnerArray = false;
@@ -28,9 +27,20 @@ describe('arrayFlattener', () => {
     expect(foundInnerArray).toEqual(false);
   });
 
-  it('returns a one-dimensional array with the correct elements', () => {
-    let returnedValue = arrayFlattener(['I', 'am', 'working', ['on', 'another', 'level']]);
-    expect(returnedValue).toEqual(['I', 'am', 'working', 'on', 'another', 'level']);
+  it("returns a one-dimensional array with the correct elements", () => {
+    let returnedValue = arrayFlattener([
+      "I",
+      "am",
+      "working",
+      ["on", "another", "level"],
+    ]);
+    expect(returnedValue).toEqual([
+      "I",
+      "am",
+      "working",
+      "on",
+      "another",
+      "level",
+    ]);
   });
-
 });
